@@ -7,9 +7,11 @@ Vamos fazer uma análise detalhada desse código Terraform.
 ### **1\. Bloco `provider`**
 
   
-`provider "aws" {`  
-  `region = "us-east-1"`  
-`}`
+```
+provider "aws" {  
+  region = "us-east-1"  
+}
+```
 
 Este bloco define o **provedor** que o Terraform usará para interagir com a infraestrutura da AWS (Amazon Web Services). O Terraform usa **provedores** para saber como se comunicar com os serviços da nuvem, como a AWS, GCP, Azure, etc.
 
@@ -19,11 +21,13 @@ Este bloco define o **provedor** que o Terraform usará para interagir com a inf
 ### **2\. Bloco `variable "projeto"`**
 
   
-`variable "projeto" {`  
-  `description = "Nome do projeto"`  
-  `type        = string`  
-  `default     = "VExpenses"`  
-`}`
+```
+variable "projeto" {  
+  description = "Nome do projeto"  
+  type        = string  
+  default     = "VExpenses"  
+}
+```
 
 Este bloco define uma **variável** chamada `projeto`. Variáveis em Terraform são usadas para parametrizar a infraestrutura, permitindo reutilização e flexibilidade no código.
 
@@ -34,11 +38,13 @@ Este bloco define uma **variável** chamada `projeto`. Variáveis em Terraform s
 ### **3\. Bloco `variable "candidato"`**
 
   
-`variable "candidato" {`  
-  `description = "Nome do candidato"`  
-  `type        = string`  
-  `default     = "SeuNome"`  
-`}`
+```
+variable "candidato" {  
+  description = "Nome do candidato"  
+  type        = string  
+  default     = "SeuNome"  
+}
+```
 
 Este bloco também define uma **variável**, mas agora com o nome `candidato`.
 
@@ -398,7 +404,9 @@ Este filtro define que a AMI deve ser compatível com a **virtualização do tip
 ### **3\. Bloco `owners`**
 
   
- `owners = ["679593333241"]`
+ ```
+ owners = ["679593333241"]
+ ```
 
 Este campo especifica o ID do proprietário das AMIs que devem ser consideradas. Neste caso, o ID `"679593333241"` pertence à equipe oficial que mantém as AMIs do **Debian** na AWS. Isso garante que as AMIs retornadas sejam oficialmente fornecidas e mantidas pela equipe Debian.
 
