@@ -120,6 +120,13 @@ resource "aws_security_group" "main_sg" {
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
+    /*
+    Poderia ser interessante que a só saia para os servidores de aplicação e o IP do cliente
+    Pois este servidor parece ser apenas para load balancer
+
+    Could be interesting that the egress only to the application server and the client IP
+    Because this server seems to be only a load balancer
+    */
   }
 
   tags = {
